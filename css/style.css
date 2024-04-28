@@ -92,12 +92,14 @@ h3 {
 /* Navegacion Principal */
 .nav-bg {
   background-color: var(--oscuro);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .navegacion-principal {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 768px) {
@@ -260,8 +262,8 @@ h3 {
   background-size: cover;
   color: #000;
   padding: 100px;
-  margin-left: 20px;
-  margin-right: 20px;
+  /* margin-left: 20px;
+  margin-right: 20px; */
   border-radius: 20px;
   margin-bottom: 60px;
 }
@@ -285,7 +287,8 @@ blockquote:after {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: 100px;
+  margin: 10px;
+  margin-bottom: 100px;
   gap: 10rem;
 }
 
@@ -524,32 +527,16 @@ body {
   top: 5px;
   right: 5px;
 }
-/* .servicio {
+.contactflex {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  margin-top: 80px;
+  margin-right: 250px;
+  margin-right: 250px;
+  padding: 0;
+  margin-bottom: 20px;
 }
-
-.servicio h3 {
-  color: var(--secundario);
-  font-weight: normal;
-}
-
-.servicio p {
-  line-height: 2;
-  text-align: center;
-}
-
-.servicio .iconos {
-  height: 15rem;
-  width: 15rem;
-  background-color: var(--gris);
-  border-radius: 50%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-} */
-
 .formulario {
   background-color: var(--gris);
   width: min(60rem, 100%); /**Utilizar el valor mas pequeño**/
@@ -568,7 +555,33 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 2rem;
-  color: var(--primario);
+  color: var(--blanco);
+}
+
+.alinear-derecha.flex {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #4c59af;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background-color: #3e8e41; /* Cambia el color de fondo al pasar el mouse por encima */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Aumenta la sombra al pasar el mouse por encima */
+}
+
+.button:active {
+  background-color: #3e8e41; /* Cambia el color de fondo al presionar el botón */
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2); /* Quita la sombra al presionar el botón */
 }
 
 @media (min-width: 768px) {
@@ -596,7 +609,7 @@ body {
   display: block;
 }
 .campo textarea {
-  height: 20rem;
+  height: 15rem;
 }
 
 .input-text {
@@ -608,39 +621,57 @@ body {
 
 .footer {
   text-align: center;
-  color: var(--blanco);
+  color: var(--oscuro);
+}
+
+.social-media-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.social-media-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 .social-media {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px;
   gap: 20px;
 }
-.icon {
-  width: 50px;
-  height: 50px;
-}
+
 .icon-link {
-  transition: color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  transition: fill 0.3s ease;
+  margin: 0 5px;
 }
 
 .icon-link:hover {
-  color: #1877f2; /* Facebook */
+  fill: #1877f2; /* Facebook */
 }
 
 .icon-link:nth-child(2):hover {
-  color: #1da1f2; /* Twitter */
+  fill: #1da1f2; /* Twitter */
 }
 
 .icon-link:nth-child(3):hover {
-  color: #e4405f; /* Instagram */
+  fill: #e4405f; /* Instagram */
 }
 
 .icon-link:nth-child(4):hover {
-  color: #000; /* GitHub */
+  fill: #000; /* GitHub */
 }
 
 .icon-link:nth-child(5):hover {
-  color: #25d366; /* WhatsApp */
+  fill: #25d366; /* WhatsApp */
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
 }
